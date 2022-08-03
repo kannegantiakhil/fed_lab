@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>dine booking</title>
+<style>
+td {
+  text-align: center;
+}
+body {
+  background-color: #66ff33;
+}
+.myDiv {
+  border: 5px outset red;
+  background-color:#ff9900;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="myDiv">
+<center>
+<h1>Dine Booking</h1>
+<form name="f1" onsubmit="return verify()">
+<table>
+<tr>
+  <td><label>Visitor Name:</label></td>
+  <td><input type="text" id="fname"size="20" name="fname"><br></td>
+</tr>
+<tr>
+  <td><label>Number of members:</label></td>
+  <td><input type="number" id="members" size="2" name="members"><br></td>
+</tr>
+<tr>
+<td>
+  <label>Contact No:</label></td>
+  <td><input type="number" id="contact" name="contact"><br></td>
+</tr>
+<tr>
+<td>
+<label>Types of Food:</label></td>
+<td>
+      <input type="checkbox" name="food" value="South Indian" />South Indian
+      <input type="checkbox" name="food" value="North Indian" />North Indian
+      <input type="checkbox" name="food" value="Chinese" />Chinese
+     <input type="checkbox" name="food" value="Westren" />Westren</td>
+<tr>
+<td>
+<label for="fname">Room Status:</label></td>
+<td>
+<input type="radio" name="gender" value="AC" />AC
+ <input type="radio" name="gender" value="NON-AC" />NON-AC<br></td>
+</tr>
+<tr><td> 
+<label>Venue Perference:</label></td>
+<td>
+<select name="VP">
+     <option value="indian">Arena</option>
+     <option value="nepali">Fiesta</option>
+     <option value="others"> Vista</option>
+     <option value="others"> Mythri</option>
+     <option value="others">  Magna</option>
+     <option value="others"> Oasis</option>
+     <option value="others"> Amoeba</option>
+   </select><br></td></tr>
+<tr>
+<td>
+<button type="submit">Book</button></td>
+<td><button type="reset">Reset</button></td></tr>
+</form>
+</center>
+</div>
+ <script >
+        function verify(){
+            if(document.f1.fname.value.length==0){
+                alert("Visitor Name field is empty");
+                return false;
+            }
+            if (document.f1.members.value.length==0){
+                alert("Number of members is not entered");
+                return false;
+            }
+           
+            if(document.f1.contact.value.length==0){
+                alert("contact is not entered");
+                return false;
+            }}
+    </script>
+</body>
+</html>

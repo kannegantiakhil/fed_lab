@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>dine booking</title>
+<style>
+td {
+  text-align: center;
+}
+body {
+  background-color: #66ff33;
+}
+.myDiv {
+  border: 5px outset red;
+  background-color:#ff9900;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="myDiv">
+<center>
+<h1>Dine Booking</h1>
+<form name="f1" onsubmit="return verify()">
+  <label>Visitor Name:</label>
+  <input type="text" id="fname"size="20" name="fname"><br>
+
+  <label>Number of members:</label>
+  <input type="number" id="members" size="2" name="members"><br>
+
+  <label>Contact No:</label>
+  <input type="number" id="contact" name="contact"><br>
+
+<label>Types of Food:</label>
+
+      <input type="checkbox" name="food" value="South Indian" />South Indian
+      <input type="checkbox" name="food" value="North Indian" />North Indian
+      <input type="checkbox" name="food" value="Chinese" />Chinese
+     <input type="checkbox" name="food" value="Westren" />Westren
+
+<label for="fname">Room Status:</label>
+
+<input type="radio" name="gender" value="AC" />AC
+ <input type="radio" name="gender" value="NON-AC" />NON-AC<br>
+
+<label>Venue Perference:</label>
+
+<select name="VP">
+     <option value="indian">Arena</option>
+     <option value="nepali">Fiesta</option>
+     <option value="others"> Vista</option>
+     <option value="others"> Mythri</option>
+     <option value="others">  Magna</option>
+     <option value="others"> Oasis</option>
+     <option value="others"> Amoeba</option>
+   </select><br>
+
+<button type="submit">Book</button>
+<button type="reset">Reset</button><
+</form>
+</center>
+</div>
+ <script >
+        function verify(){
+            if(document.f1.fname.value.length==0){
+                alert("Visitor Name field is empty");
+                return false;
+            }
+            if (document.f1.members.value.length==0){
+                alert("Number of members is not entered");
+                return false;
+            }
+           
+            if(document.f1.contact.value.length==0){
+                alert("contact is not entered");
+                return false;
+            }}
+    </script>
+</body>
+</html>

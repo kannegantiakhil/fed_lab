@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>Confirm Box</title>
+<style>
+p
+{
+border: double 8px red;
+font-size: 28px;
+color: green;
+text-align: center;
+}
+h1
+{
+color: blue;
+text-align:center;
+}
+</style>
+
+<script>
+
+function getYourDecision() {
+	var course = confirm("Are you interested in taking Online Classes?");	
+	if (course==true)  {
+		document.write("<h2 style='color:green'>Congratulations! You have taken right decision! You can learn Courses from Udemy/NPTEL/Coursera.</h2>");//if we press OK then it will display this message
+	}
+	else   {
+		document.write("<h2 style='color:red'>Sorry! you need to update yourself..!");//if we press Cancel then it will display this message
+	}
+}
+
+getYourDecision();
+</script>
+<body>
+	<div>
+	<h1>Department of CSE, VVIT, Nambur</h1>
+	<p>Plenty of Courses you can opt...like ML/Data Science/Cloud Computing</p>
+	</div>
+</body>
+</html>
